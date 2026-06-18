@@ -120,7 +120,6 @@ switch(estado)
 }
 
     case AGUARDANDO_COMANDO:
-//
     if(gpio_get_level(13) == 0)
     {
         estado = CAPTURANDO_FOTO;
@@ -155,9 +154,9 @@ switch(estado)
 {
     //I.A//
     /*Configuracoes para salvar uma foto em arquivo no cartão microSD
-    - Na linha 165, a I.A criou um programa tenta criar o arquivo foto.jpg no cartão, se já existir o arquivo será apagado e um novo será criado.
-    - Nas linhas 166. a 168, é para verificar se deu erro, por exemplo se o arquivo for NULL é porque não foi possivel criar o arquivo, nesse caso aparece a mensagem de erro ("Erro ao criar arquivo\n")
-    - Nas linhas 170 a 173, Libera a memória usada pela foto, logo após ele informa ao programa que ocorreu um erro, se conseguiu criar o arquivo significa que o arquivo foi criado corretamente.*/
+    - Na linha 160, a I.A criou um programa tenta criar o arquivo foto.jpg no cartão, se já existir o arquivo será apagado e um novo será criado.
+    - Nas linhas 162. a 163, é para verificar se deu erro, por exemplo se o arquivo for NULL é porque não foi possivel criar o arquivo, nesse caso aparece a mensagem de erro ("Erro ao criar arquivo\n")
+    - Nas linhas 164 a 167, Libera a memória usada pela foto, logo após ele informa ao programa que ocorreu um erro, se conseguiu criar o arquivo significa que o arquivo foi criado corretamente.*/
     FILE *arquivo = fopen("/sdcard/foto.jpg", "wb");
     if(arquivo == NULL)
     {
@@ -169,9 +168,9 @@ switch(estado)
     }
     else
     {
-        /* - Na linha 175, os dados da foto vai ser copiado da memória para o arquivo no cartão microSD
-           - Na linha 176, termina o save da fto (exemplo: seria como clicar em "salvar" e fechar o arquivo)
-           - Na linha 177, ele avisa que deu certo e mostra a mensagem ("Foto salva no SD\n" )*/
+        /* - Na linha 174, os dados da foto vai ser copiado da memória para o arquivo no cartão microSD
+           - Na linha 175, termina o save da fto (exemplo: seria como clicar em "salvar" e fechar o arquivo)
+           - Na linha 176, ele avisa que deu certo e mostra a mensagem ("Foto salva no SD\n" )*/
         fwrite(foto->buf, 1, foto->len, arquivo);
         fclose(arquivo);
         printf("Foto salva no SD\n");
