@@ -1,0 +1,5 @@
+links que podem ser úteis:
+
+https://pt.hwlibre.com/c%C3%A2mera-esp32/ - ESP32-CAM: o que você deve saber sobre este módulo
+https://blog.saravati.com.br/sistema-transmissao-video-esp32/ - Como Fazer um Sistema de Transmissão de Vídeo com a ESP32-CAM
+https://pt.howwhatproduce.com/10432343-getting-started-with-esp32-cam-streaming-video-using-esp-cam-over-wifi-esp32-security-camera-project-8-steps - Primeiros passos com ESP32 CAM - Streaming de vídeo usando ESP CAM por Wifi - Projeto de câmera de segurança ESP32: 8 etapas
